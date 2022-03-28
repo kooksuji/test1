@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>국수지 웹 포트폴리오</title>
+        <script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimal-ui">
+        <meta name="keywords" content="">
+        <link rel="stylesheet" href="css/reset.css">
+        <link href="./css/portfolio.css" rel="stylesheet" type="text/css">
+        <link rel="shortcut icon" href="images/ico/favicon-16x16.png">
+        <link
+        rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    </head>
+    <body>
+         <header>
+            <div class="header_wrap">
+                <nav class="wrap">
+                    <ul  class="nav">
+                       <li><a href="#main">Home</a></li>
+                       <li><a href="#portfolio">Portfolio</a></li>
+                       <li><a href="#footer">Thank you</a></li>
+                    </ul>
+                </nav>    
+            </div>
+        </header>
+        <content>
+            <div>
+                <div id="main">
+                    <div class="main_wrap">
+                        <section id="tit" class="animate__animated animate__flash">
+                            <img src="images/flower_tit.png" alt="수지 포트폴리오" class="tit">
+                        </section>
+                        <div class="flower_box">
+                            <img src="images/flower.png" alt="파란색꽃" class="flower" id="flower1">
+                            <img src="images/flower.png" alt="파란색꽃" class="flower" id="flower2">
+                            <img src="images/flower.png" alt="파란색꽃" class="flower" id="flower3">
+                            <img src="images/flower.png" alt="파란색꽃" class="flower" id="flower4">
+                            <img src="images/flower.png" alt="파란색꽃" class="flower" id="flower5">
+                            <img src="images/flower.png" alt="파란색꽃" class="flower" id="flower6">
+                        </div>
+                    </div>
+                </div>    
+                <section id="portfolio">
+                    <h2>Portfolio</h2>
+                    <div class="portfolio_wrap">
+                        <div class="content" id="doosan">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <div class="card_img">
+                                <div class="dark_bg"></div>
+                                <a href="https://kooksuji.github.io/doosan_mock_up/" target="_blank">
+                                    <div class="txt_box">
+                                        <p>Doosan renewal</p>
+                                        <p>&#91; 반응형 &#93;</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="content" id="natuur">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <div class="card_img">
+                                <div class="dark_bg"></div>
+                                <a href="./natuur/mock_up/natuur_mock.html" target="_blank">
+                                    <div class="txt_box">
+                                        <p>Natuur renewal</p>
+                                        <p>&#91; 반응형 &#93;</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                         <div class="content" id="botanic">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <div class="card_img">
+                                <div class="dark_bg"></div>
+                                <a href="./garden/mock_up/garden.mock_up.html" target="_blank">
+                                    <div class="txt_box">
+                                        <p>은행 식물원 renewal</p>
+                                        <p>&#91; 반응형 &#93;</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="content" id="innocent">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <div class="card_img">
+                                <div class="dark_bg"></div>
+                                <a href="./innocent/mock_up/innocent_mock.html" target="_blank">
+                                    <div class="txt_box">
+                                        <p>Innocent renewal</p>
+                                        <p>&#91; 반응형 &#93;</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>   
+                    </div>    
+                </section>
+            </div>           
+        </content> 
+        <footer>
+            <section id="footer">
+                <div class="footer_flower">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <p class="thankyou">Thank You for watching</p>
+            </section>   
+            <p id="copy">©&#46; 2022 Su-Ji&#46; All Rights Reserved&#46;</p>
+        </footer>
+        <div id="totop" class="iconbutton" >
+				▲
+		</div>
+       
+        <script src="js/jquery-3.1.1.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                if($(this).scrollTop()==0){
+                  $(".iconbutton").hide();
+                }
+                
+                $(document).scroll(function(){
+                    if($(this).scrollTop()>0){
+                        $(".iconbutton").show()
+                        $('.nav').css({
+                            backgroundColor : 'rgba(0,0,0,0.4)',
+                            borderRadius : '0px 0px 30px 30px'
+                            
+                        })
+                    }
+                    
+                    else{
+                        $(".iconbutton").hide();
+                        $('.nav').css({
+                            backgroundColor : 'rgba(0,0,0,0)',
+                            borderRadius : '0px 0px 30px 30px'
+                            
+                        })
+                    }  
+                })
+                
+                $(".iconbutton").click(function(){
+                    $("html,body").animate({
+                        scrollTop:0,
+                    },200)
+                })      
+                $(document).scroll(function(){
+                    if($(this).scrollTop()>30){
+                        $("#flower1").css({
+                            width : '150px'
+                        })
+                    }
+                    else{
+                        $("#flower1").css({
+                            width : '0px'
+                        });
+                    } 
+                })
+                $(document).scroll(function(){
+                    if($(this).scrollTop()>50){
+                        $("#flower2").css({
+                            width : '50px'
+                        })
+                    }
+                    else{
+                        $("#flower2").css({
+                            width : '0px'
+                        });
+                    } 
+                })   
+                $(document).scroll(function(){
+                    if($(this).scrollTop()>50){
+                        $("#flower3").css({
+                            width : '100px'
+                        })
+                    }
+                    else{
+                        $("#flower3").css({
+                            width : '0px'
+                        });
+                    } 
+                })
+                $(document).scroll(function(){
+                    if($(this).scrollTop()>100){
+                        $("#flower4").css({
+                            width : '100px'
+                        })
+                    }
+                    else{
+                        $("#flower4").css({
+                            width : '0px'
+                        });
+                    } 
+                })
+                $(document).scroll(function(){
+                    if($(this).scrollTop()>100){
+                        $("#flower5").css({
+                            width : '120px'
+                        })
+                    }
+                    else{
+                        $("#flower5").css({
+                            width : '0px'
+                        });
+                    } 
+                })
+                $(document).scroll(function(){
+                    if($(this).scrollTop()>150){
+                        $("#flower6").css({
+                            width : '60px'
+                        })
+                    }
+                    else{
+                        $("#flower6").css({
+                            width : '0px'
+                        });
+                    } 
+                })
+                
+            })
+            
+        </script>
+    </body>
+</html>
